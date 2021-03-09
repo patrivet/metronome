@@ -8,7 +8,7 @@ const Songs = () => {
   const { activeBpm } = useContext(AppContext);
   const bpmSongs = () => {
     // filter songs matching activeBpm only.
-    return allSongs.filter( (song) => song[2] == activeBpm)
+    return allSongs.filter( ([song, artist, bpm]) => Number(bpm) === activeBpm)
   }
 
   return (
