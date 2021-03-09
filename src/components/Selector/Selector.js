@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import './Selector.css';
 
 // Custom components
 import { AppContext } from '../../App';
@@ -16,9 +17,9 @@ const Selector = () => {
       {bpms.map((bpm) => ((
         <div
           key={bpm}
-          className={`${(bpm === activeBpm) ? 'selected' : 'unselected'}`}
+          className={`selector__button ${(bpm === activeBpm) ? 'selected' : 'unselected'}`}
           onClick={() => { handleClick(bpm) }}>
-          {bpm}
+          {bpm}{' '}bpm
         </div>
       )))}
     </div>
