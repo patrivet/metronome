@@ -25,10 +25,12 @@ function App() {
 
   return (
     <AppContext.Provider value={context}>
-      <Header />
-      <Metronome />
-      <Selector />
-      <Songs />
+      <div className='App'>
+        <Header />
+        <Metronome />
+        <Selector />
+        <Songs />
+      </div>
     </AppContext.Provider>
   );
 }

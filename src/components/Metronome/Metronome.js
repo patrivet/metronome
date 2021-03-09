@@ -8,7 +8,7 @@ const Metronome = () => {
   const { activeBpm } = useContext(AppContext);
 
   return (
-      <div className="metronome">{activeBpm}</div>
+    <div className="metronome">{activeBpm}</div>
   );
 };
 
