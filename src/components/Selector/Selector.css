@@ -1,3 +1,5 @@
+@import '../../App-variables.css';
+
 .selector {
   display: flex;
   justify-content: center;
@@ -21,6 +23,6 @@
 }
 
 .selector__button.selected {
-  background-color: #8eacff;
-  color: #161020;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
