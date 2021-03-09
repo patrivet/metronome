@@ -1,7 +1,9 @@
+@import './App-variables.css';
+
 body {
   background-color:#161020;
   /* Primary font color */
-  color: #8eacff;
+  color: var(--primary-font-color);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   text-align: center;
