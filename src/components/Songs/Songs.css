@@ -1,0 +1,9 @@
+.songs {
+  text-transform: none;
+  font-weight: 900;
+  letter-spacing: 0.78px;
+}
+
+.songs__song {
+  color: white;
+}
