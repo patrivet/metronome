@@ -8,7 +8,7 @@ import { Selector } from "./components/Selector/Selector";
 import { Songs } from "./components/Songs/Songs";
 
 // Get default bpms from env file or use defaults if missing.
-const BPMS = process.env.REACT_APP_BPMS?.split(',') || [72, 74, 82, 84, 128, 138];
+const BPMS = process.env.REACT_APP_BPMS?.split(',').map(Number) || [72, 74, 82, 84, 128, 138];
 const INITAL_BPM = process.env.REACT_APP_INIT_BPM || BPMS[0];
 
 export const AppContext = createContext();
