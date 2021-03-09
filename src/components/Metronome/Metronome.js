@@ -1,5 +1,14 @@
+import { useContext } from 'react';
+
+// Custom components
+import { AppContext } from '../../App';
+
 const Metronome = () => {
-  return <div>Metronome</div>;
+  const { activeBpm } = useContext(AppContext);
+
+  return (
+    <div>{activeBpm}</div>
+  );
 };
 
 export { Metronome };
