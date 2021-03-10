@@ -7,18 +7,11 @@ import click2 from '../../assets/click2.wav';
 import { AppContext } from '../../App';
 const clickSound1 = new Audio(click1);
 const clickSound2 = new Audio(click2);
-
-
+let intervalId = null;
 
 const Metronome = () => {
-  let intervalId = null;
-
-
   const { activeBpm } = useContext(AppContext);
 
-  const getBpmPauseRate = () => {
-    return (60 / activeBpm) * 1000;
-  }
   const playClick = () => {
     clickSound1.play();
   }
@@ -26,9 +19,11 @@ const Metronome = () => {
   useEffect( ()=> {
     // clear the current interval
     if (intervalId) clearInterval(intervalId);
-
-    intervalId = setInterval(playClick, getBpmPauseRate());
-
+    let intervalSeconds = (60 / activeBpm);
+    intervalId = setInterval(playClick, intervalSeconds * 1000);
+    // set interval seconds to css variable.
+    const metronomeElement = document.querySelector('.metronome');
+    metronomeElement.style.setProperty('--pulse-rate', `${intervalSeconds}s`)
   }, [activeBpm])
 
   return (

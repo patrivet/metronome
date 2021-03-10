@@ -1,5 +1,7 @@
-/* Colors */
 :root {
+  /* Colors */
   --primary-color: #8eacff;
   --secondary-color: #161020;
+  /* Metronome circle pulse rate */
+  --pulse-rate: 1.25s;
 }
