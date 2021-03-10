@@ -6,6 +6,8 @@
   letter-spacing: 1.33px;
   width: 132px;
   height: 132px;
+  min-height: 132px;
+  min-width: 132px;
   background-color: #64bca4;
   border-radius: 50%;
   display: flex;
