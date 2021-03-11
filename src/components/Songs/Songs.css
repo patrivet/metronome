@@ -7,4 +7,6 @@
 .songs__name-artist {
   color: white;
   font-weight: 400;
+  height: 300px;
+  overflow: auto
 }
