@@ -13,5 +13,7 @@ An app displaying a digital metronome with the option to specify a bpm from pref
 REACT_APP_BPMS="72, 74, 128, 140, 174, 190"
 REACT_APP_INIT_BPM=174
 ```
-
  4.  Run app ```npm start```
+
+## Live app:
+See the app hosted [here](https://metronome-pr.netlify.app)
