@@ -8,7 +8,7 @@ import { allSongs } from '../../assets/bpm';
 // Variables for Songs API handling
 const BASE_URL = process.env.REACT_APP_SONGS_API_URL;
 const API_KEY = process.env.REACT_APP_SONGS_API_KEY;
-const TEMPLATE_URL = BASE_URL.replace('<API_KEY>', API_KEY);
+const TEMPLATE_URL = BASE_URL?.replace('<API_KEY>', API_KEY);
 
 const Songs = () => {
   const { activeBpm } = useContext(AppContext);
@@ -44,8 +44,12 @@ const Songs = () => {
   };
 
   useEffect( () => {
-    let urlWithBpm = TEMPLATE_URL.replace('<BPM>', activeBpm)
-    fetchSongs(urlWithBpm);
+    let urlWithBpm = TEMPLATE_URL?.replace('<BPM>', activeBpm)
+    if (!urlWithBpm) {
+      setReady(true)
+    } else {
+      fetchSongs(urlWithBpm);
+    }
   },[activeBpm])
 
   const songsFromFile = () => { return (
