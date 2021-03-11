@@ -18,7 +18,7 @@ const Songs = () => {
   return (
     <div className="songs">
       <p>Songs that use this BPM:</p>
-      <div className="songs__song">{bpmSongs().map( ([name, artist, bpm]) => {
+      <div className="songs__name-artist">{bpmSongs().map( ([name, artist, bpm]) => {
         return (<p key={`${name}_${artist}_${bpm}`}>{name}{' '}({artist})</p>)
       })}
       </div>

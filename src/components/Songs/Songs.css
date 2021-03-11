@@ -4,6 +4,7 @@
   letter-spacing: 0.78px;
 }
 
-.songs__song {
+.songs__name-artist {
   color: white;
+  font-weight: 400;
 }
