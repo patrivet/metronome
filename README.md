@@ -5,15 +5,22 @@ An app displaying a digital metronome with the option to specify a bpm from pref
 
  1. Clone this repo ```git clone https://github.com/patrivet/metronome.git```
  2. Install dependancies ```npm install```
- 3.  Optionally, if you wish to provide a custom list of BPMs (Beats per minute) to be shown in the app, create an (environment) file named ".env" and populate with your chosen data in the following format:-
-
-(In this example - the BPMS: 72, 74, 128, 140, 174 and 190 will be shown.  The initially selected BPM will be 74bpm).
-
-In the absence of this environment file, a default list of BPMs will be used.
+ 3.  Optional setup: If you wish to provide either (i) a custom list of BPMs to be used and/or (ii) display an fuller list of songs for a given BPM, create an (environment) file named ".env" and populate with the following:-
 ```
-REACT_APP_BPMS="72, 74, 128, 140, 174, 190"
-REACT_APP_INIT_BPM=174
+REACT_APP_BPMS='<YOUR_BPMS_HERE>'
+REACT_APP_INIT_BPM=<YOUR_STARTING_BPM_HERE>
+REACT_APP_SONGS_API_URL='https://api.getsongbpm.com/tempo/?api_key=<API_KEY>&bpm=<BPM>'
+REACT_APP_SONGS_API_KEY='<YOUR_API_KEY_HERE>'
 ```
+ 
+BPMs customisation: 
+(i) Inside the /env file, replace <YOUR_BPMS_HERE> with your BPMs - e.g.  '72, 74, 128, 140, 174, 190'
+Replace <YOUR_STARTING_BPM_HERE> with one of the BPMs - e.g. 74
+
+Songs customisation
+(ii) 
+- Register for an API key at https://getsongkey.com/api and inside the .env file, replace <YOUR_API_KEY_HERE> with this api key. 
+
  4.  Run app ```npm start```
 
 ## Live app:
