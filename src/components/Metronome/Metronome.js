@@ -1,14 +1,14 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import './Metronome.css'
 import click1 from '../../assets/click1.wav';
 
 // Custom components and props
-import { AppContext } from '../../App';
+import { useAppContext } from '../../App';
 const clickSound1 = new Audio(click1);
 let intervalId = null;
 
 const Metronome = () => {
-  const { activeBpm } = useContext(AppContext);
+  const { activeBpm } = useAppContext();
 
   const playClick = () => {
     clickSound1.play().catch((error) => {

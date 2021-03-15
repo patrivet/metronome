@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useContext } from "react";
 import "./App.css";
 
 // Import custom components
@@ -11,7 +11,8 @@ import { Songs } from "./components/Songs/Songs";
 const BPMS = process.env.REACT_APP_BPMS?.split(',') || [72, 74, 82, 84, 128, 138];
 const INITAL_BPM = process.env.REACT_APP_INIT_BPM || BPMS[0];
 
-export const AppContext = createContext();
+const AppContext = createContext();
+export const useAppContext = () => useContext(AppContext);
 
 function App() {
   const [activeBpm, setActiveBpm] = useState(INITAL_BPM);

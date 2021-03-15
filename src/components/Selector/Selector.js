@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import './Selector.css';
 
 // Custom components
-import { AppContext } from '../../App';
+import { useAppContext } from '../../App';
 
 const Selector = () => {
-  const { bpms, activeBpm, setActiveBpm } = useContext(AppContext);
+  const { bpms, activeBpm, setActiveBpm } = useAppContext();
 
   const handleClick = (bpm) => {
     // Set clicked bpm to active bpm
